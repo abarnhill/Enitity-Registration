@@ -90,21 +90,6 @@
     position: relative;
   }
 
-  /* ── Setup Banner ── */
-  .setup-banner {
-    background: #fff8e8;
-    border: 1px solid #e8c97a;
-    border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-    margin: 1.5rem auto;
-    max-width: 780px;
-    font-size: 13px;
-    color: #7a5c0a;
-    line-height: 1.6;
-  }
-  .setup-banner strong { font-weight: 500; }
-  .setup-banner a { color: #c9a84c; }
-
   /* ── Layout ── */
   .container {
     max-width: 780px;
@@ -493,16 +478,6 @@
 
 <div class="container">
 
-  <!-- ══ SETUP BANNER — REMOVE AFTER CONFIGURING ══ -->
-  <div class="setup-banner" id="setup-note">
-    <strong>⚙️ Setup required:</strong> To receive form submissions by email, create a free account at
-    <a href="https://formspree.io" target="_blank">formspree.io</a>, create a new form, and replace
-    <code style="background:#fff3cd; padding:1px 5px; border-radius:3px;">YOUR_FORMSPREE_ID</code> in the
-    <code>&lt;form&gt;</code> tag's <code>action</code> attribute below in the HTML source.
-    Your Formspree ID looks like: <code>xpwzabcd</code>.
-    File attachments are supported on Formspree's free plan (up to 20 MB).
-  </div>
-
   <!-- ══ PROGRESS ══ -->
   <div class="progress-wrap">
     <div class="step-labels">
@@ -517,7 +492,7 @@
   </div>
 
   <!-- ══ FORM ══ -->
-  <form id="intake-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
+  <form id="intake-form" action="https://formspree.io/f/mjgpzndp" method="POST" enctype="multipart/form-data">
 
     <!-- ─── PAGE 1: Client Info ─── -->
     <div class="page active" id="pg1">
@@ -1045,7 +1020,7 @@
         document.getElementById('intake-form').style.display = 'none';
         document.getElementById('success-screen').style.display = 'block';
         document.querySelector('.progress-wrap').style.display = 'none';
-        document.getElementById('setup-note') && (document.getElementById('setup-note').style.display = 'none');
+
       } else {
         throw new Error('Server error');
       }
